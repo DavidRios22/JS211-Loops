@@ -15,14 +15,14 @@ const person = {
 }
 
 const keyLogger = () => {
-    console.log(Object.keys(person));
+    // console.log(Object.keys(person));
 }
 
 
 
 const valueLogger = () => {
     for (const [key, value] of Object.entries(person)) {
-        console.log(`The key is ${key}: and the value is ${value}`);
+        // console.log(`The key is ${key}: and the value is ${value}`);
     }
 }
 
@@ -65,7 +65,7 @@ const oddYear = () => {
     for (const peep of people) {
         let birthYear = peep.birthDate.split(" ")
         if (birthYear[2] % 2 == 1) {
-            console.log(peep);
+            // console.log(peep);
         }
     }
 }
@@ -81,15 +81,17 @@ const bornBefore = () => {
     for (const peep of people) {
         let birthYear = peep.birthDate.split(" ")
         if (birthYear[2] < 1990) {
-            console.log(birthYear);
+            // console.log(birthYear);
         }
     }
 }
 
 bornBefore()
 
+const findMale = people.find(peep => peep.gender == "male")
 
+const findMaleIndex = people.findIndex(peep => peep.gender == "male")
 
-
-
+console.log(findMale);
+console.log(findMaleIndex);
 
